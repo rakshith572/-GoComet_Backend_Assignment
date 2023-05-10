@@ -18,11 +18,11 @@ const searchTag = async (tag)=>{
     }
 
     return new Promise(async(resolve,reject)=>{
-        var task=await Blog.find({Tag:tag});
-        if(task.length!=0){
-            resolve(task);
-            return;
-        }
+//         var task=await Blog.find({Tag:tag});
+//         if(task.length!=0){
+//             resolve(task);
+//             return;
+//         }
         fetch(`${searchUrl}${tag}`)
         .then(async (response)=>{
             const body = await getBody(response);
