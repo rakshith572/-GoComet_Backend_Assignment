@@ -18,11 +18,22 @@ const searchTag = async (tag)=>{
     }
 
     return new Promise(async(resolve,reject)=>{
-//         var task=await Blog.find({Tag:tag});
-//         if(task.length!=0){
-//             resolve(task);
-//             return;
-//         }
+        var task=await Blog.find({Tag:tag});
+        if(task.length!=0){
+            const items=[];
+            var count=0;
+            for(const i in task){
+                var res=task[i];
+                res['id']=res._id.toString();
+                items.push(res);
+                count++;
+                if(count==task.length){
+                    console.log(items);
+                    resolve(items);
+                }
+            }
+            return;
+        }
         fetch(`${searchUrl}${tag}`)
         .then(async (response)=>{
             const body = await getBody(response);
