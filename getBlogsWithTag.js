@@ -28,7 +28,7 @@ const searchTag = async (tag)=>{
                 items.push(res);
                 count++;
                 if(count==task.length){
-                    console.log(items);
+                    // console.log(items);
                     resolve(items);
                 }
             }
