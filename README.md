@@ -8,7 +8,7 @@
 
 step 1 : Open Terminal
 
-step 2 : git clone https://github.com/rakshith572/-GoComet_Backend_Assignment.git
+step 2 : git clone https://github.com/rakshith572/medium_web_scraper_node.js.git
 
 step 3 : cd -GoComet_Backend_Assignment
 
